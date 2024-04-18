@@ -6,7 +6,7 @@ RUN xcaddy build \
     --with github.com/caddy-dns/cloudflare
 
 ## dockerhub source (should be cached)
-FROM caddy:2.7.6
+FROM caddy:2.7.6-alpine
 
 ## copy over binary
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
